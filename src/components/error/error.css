@@ -1,0 +1,15 @@
+.error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #00bc8c;
+    color: red;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 350px;
+}
+.error__img{
+    width: 40px;
+    height: 40px;
+}
