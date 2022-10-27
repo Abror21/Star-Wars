@@ -26,7 +26,7 @@ const App = () => {
     <div className='container'>
       <ErrorBoundary>
         <SwapiServiceProvider value={swapiService}>
-          <Router>
+          <Router basename='/Star-Wars'>
 
             <Header onServiceChange={onServiceChange} />
             <RandomPlanet updateInterval={10000} />
@@ -36,13 +36,12 @@ const App = () => {
               <Route path='/people' element={<PeoplePage />}>
                 <Route path=':id' element={<PeoplePage />}/>
               </Route>
-              <Route path='/people/:id' element={<PeoplePage />} />
               <Route path='/planets' element={<PlanetsPage />} />
               <Route path='/starships' element={<StarshipsPage />} />
               <Route path='/starships/:id' element={ <StarshipDetails />} />
               <Route path='/login' element={ <LoginPage isLoggedIn={isLoggedIn} onLogin={onLogin}/>} />
               <Route path='/secret' element={ <SecretPage isLoggedIn={isLoggedIn}/>} />
-              <Route path='*' element={<Navigate to="/"/>}/>
+              <Route path='*' element={<h1>Page not found</h1>}/>
             </Routes>
 
           </Router>
